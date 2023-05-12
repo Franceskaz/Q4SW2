@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<style type="text/css">
+
+		body{
+			background-size: cover;background-attachment: fixed;
+		}
+		.center{
+			margin-left: auto;
+			margin-right: auto; 
+		}
+
+		.center th{
+			padding: 40px;
+		}
+		.img{ 
+		margin-left: auto;
+		margin-right: auto; }
+	</style>
+</head>
+<body bgcolor=black>
+<br>
+<br>
+<center><img src="clock.png" width="250px"></center>
+	
+	<center><h1>Convert time bozo</h1></center>
+	<center><h2>lets convert time</h2></center>
+
+<table class="center">
+	<tbody>
+		<tr>
+			<th style="background-color:pink">
+			<center>"Seconds"</center>
+				<p>
+				<center><input type="text" id="seconds"></center>
+				</p>
+			<input type="button" class="btn btn-danger" onclick="SecMin()" value="To Minutes">
+			<input type="button" class="btn btn-danger" onclick="SecHr()" value="To Hours">
+			<input type="button" class="btn btn-danger" onclick="SecDt()" value="To Days">
+			</th>
+			<th style="background-color:lightblue">
+			<center>"Minutes"</center>
+				<p>
+				<center><input type="text" id="minutes"></center>
+				</p>
+			<input type="button" class="btn btn-primary" onclick="MinSec()" value="To Seconds">
+			<input type="button" class="btn btn-primary" onclick="MinHr()" value="To Hours">
+			<input type="button" class="btn btn-primary" onclick="MinDt()" value="To Days">
+			</th>
+		</tr>
+
+	</tbody>
+</table>
+<table class="center" col-md="5" col-md="4">
+	<tbody>
+		<tr>
+			<th style="background-color:lightgreen">
+			<center>"Hours"</center>
+				<p>
+				<center><input type="text" id="hours"></center>
+				</p>
+			<input type="button" class="btn btn-success" onclick="HrSec()" value="To Seconds">
+			<input type="button" class="btn btn-success" onclick="HrMin()" value="To Minutes">
+			<input type="button" class="btn btn-success" onclick="HrDt()" value="To Days">
+			</th>
+			<th style="background-color:lightyellow">
+			<center>"Days"</center>
+				<p>
+				<center><input type="text" id="days"></center>
+				</p>
+			<input type="button" class="btn btn-warning" onclick="DtSec()" value="To Seconds">
+			<input type="button" class="btn btn-warning" onclick="DtMin()" value="To Minutes">
+			<input type="button" class="btn btn-warning" onclick="DtHr()" value="To Hours">
+			</th>
+		</tr>
+
+	</tbody>
+</table>
+<script type="text/javascript">
+	function SecMin(){
+		let a = parseInt(document.getElementById('seconds').value);
+		let b = 60;
+		alert(a / b);
+	}
+	function SecHr(){
+		let a = parseInt(document.getElementById('seconds').value);
+		let b = 3600;
+		alert(a / b);
+	}
+	function SecDt(){
+		let a = parseInt(document.getElementById('seconds').value);
+		let b = 86400;
+		alert(a * b);
+	}
+		function MinSec(){
+		let a = parseInt(document.getElementById('minutes').value);
+		let b = 60;
+		alert(a / b);
+	}
+	function MinHr(){
+		let a = parseInt(document.getElementById('minutes').value);
+		let b = 1440;
+		alert(a / b);
+	}
+	function MinDt(){
+		let a = parseInt(document.getElementById('minutes').value);
+		let b = 3600;
+		alert(a * b);
+	}
+		function HrSec(){
+		let a = parseInt(document.getElementById('hours').value);
+		let b = 3600;
+		alert(a / b);
+	}
+	function HrMin(){
+		let a = parseInt(document.getElementById('hours').value);
+		let b = 60;
+		alert(a / b);
+	}
+	function HrDt(){
+		let a = parseInt(document.getElementById('hours').value);
+		let b = 24;
+		alert(a * b);
+	}
+		function DtSec(){
+		let a = parseInt(document.getElementById('days').value);
+		let b = 86400;
+		alert(a * b);
+	}
+	function DtMin(){
+		let a = parseInt(document.getElementById('days').value);
+		let b = 1440;
+		alert(a * b);
+	}
+	function DtHr(){
+		let a = parseInt(document.getElementById('days').value);
+		let b = 24;
+		alert(a * b);
+	}
+</script>
+</body>
+</html>
